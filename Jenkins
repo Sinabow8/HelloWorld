@@ -1,0 +1,14 @@
+node{
+	stage('SCM Checkout'){
+		git 'https://github.com/Sinabow8/HelloWorld'
+	}
+	stage('Compile-Package'){
+		bat 'mvn clean compile'
+	}
+	stage('Test'){
+		//do some tests
+	}
+	stage('Deploy'){
+		//deploy the project
+	}
+}
